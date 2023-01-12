@@ -785,12 +785,12 @@ def check_type(argname: str, value, expected_type, memo: Optional[_TypeCheckMemo
                 print("*********************")
                 print("Value:")
                 print(value)
-                if issubclass(value, enum.Enum):
+                if issubclass(value, Enum):
                     print(value.value)
                 print("*********************")
                 print("Expected type:")
                 print(expected_type)
-                if issubclass(expected_type, enum.Enum):
+                if issubclass(expected_type, Enum):
                     print(expected_type.value)
                 print("*********************")
                 raise TypeError(
