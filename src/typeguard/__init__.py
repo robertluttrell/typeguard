@@ -786,11 +786,12 @@ def check_type(argname: str, value, expected_type, memo: Optional[_TypeCheckMemo
                 print("Value:")
                 print(value)
                 if value:
-                    print(value.__qualname__)
+                    print(inspect.getsource(value))
                 print("*********************")
                 print("Expected type:")
+                print(expected_type)
                 if expected_type:
-                    print(expected_type.__qualname__)
+                    print(inspect.getsource(value))
                 print("*********************")
                 raise TypeError(
                     'type of {} must be {}; got {} instead'.
