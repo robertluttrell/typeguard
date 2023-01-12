@@ -785,11 +785,13 @@ def check_type(argname: str, value, expected_type, memo: Optional[_TypeCheckMemo
                 print("*********************")
                 print("Value:")
                 print(value)
-                print(value.value)
+                if value:
+                    print(value.value)
                 print("*********************")
                 print("Expected type:")
                 print(expected_type)
-                print(expected_type.value)
+                if expected_type:
+                    print(expected_type.value)
                 print("*********************")
                 raise TypeError(
                     'type of {} must be {}; got {} instead'.
