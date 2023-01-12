@@ -782,6 +782,13 @@ def check_type(argname: str, value, expected_type, memo: Optional[_TypeCheckMemo
                     raise TypeError('type of {} must be bytes-like; got {} instead'
                                     .format(argname, qualified_name(value)))
             elif not isinstance(value, expected_type):
+		print("*********************")
+		print("Value:")
+		print(value)
+		print("*********************")
+		print("Expected type:")
+		print(expected_type)
+		print("*********************")
                 raise TypeError(
                     'type of {} must be {}; got {} instead'.
                     format(argname, qualified_name(expected_type), qualified_name(value)))
