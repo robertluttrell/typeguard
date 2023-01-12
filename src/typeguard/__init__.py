@@ -786,7 +786,7 @@ def check_type(argname: str, value, expected_type, memo: Optional[_TypeCheckMemo
                 print(f"Value: {value}")
                 if value:
                     print(f"id: {id(value)}")
-                    print(f"isclass: {isclass(value}")
+                    print(f"isclass: {isclass(value)}")
                 print("*********************")
                 print(f"expected_type: {expected_type}")
                 if expected_type:
