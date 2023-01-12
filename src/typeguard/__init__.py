@@ -785,9 +785,11 @@ def check_type(argname: str, value, expected_type, memo: Optional[_TypeCheckMemo
                 print("*********************")
                 print("Value:")
                 print(value)
-                print(value.__qualname__)
+                if value:
+                    print(value.__qualname__)
                 print("*********************")
                 print("Expected type:")
+                if expected_type:
                 print(expected_type.__qualname__)
                 print("*********************")
                 raise TypeError(
