@@ -791,7 +791,7 @@ def check_type(argname: str, value, expected_type, memo: Optional[_TypeCheckMemo
                 print(f"expected_type: {expected_type}")
                 if expected_type:
                     print(f"id: {id(expected_type)}")
-                    print(f"isclass: {isclass(expected_type}")
+                    print(f"isclass: {isclass(expected_type)}")
                 print("*********************")
                 raise TypeError(
                     'type of {} must be {}; got {} instead'.
