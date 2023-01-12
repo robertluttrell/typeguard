@@ -783,15 +783,15 @@ def check_type(argname: str, value, expected_type, memo: Optional[_TypeCheckMemo
                                     .format(argname, qualified_name(value)))
             elif not isinstance(value, expected_type):
                 print("*********************")
-                print("Value:")
-                print(value)
+                print(f"Value: {value}")
                 if value:
-                    print(id(value))
+                    print(f"id: {id(value)}")
+                    print(f"isclass: {isclass(value}")
                 print("*********************")
-                print("Expected type:")
-                print(expected_type)
+                print(f"expected_type: {expected_type}")
                 if expected_type:
-                    print(id(expected_type))
+                    print(f"id: {id(expected_type)}")
+                    print(f"isclass: {isclass(expected_type}")
                 print("*********************")
                 raise TypeError(
                     'type of {} must be {}; got {} instead'.
