@@ -786,13 +786,11 @@ def check_type(argname: str, value, expected_type, memo: Optional[_TypeCheckMemo
                 print("Value:")
                 print(value)
                 if value:
-                    print(inspect.getsource(value))
                     print(id(value))
                 print("*********************")
                 print("Expected type:")
                 print(expected_type)
                 if expected_type:
-                    print(inspect.getsource(value))
                     print(id(expected_type))
                 print("*********************")
                 raise TypeError(
